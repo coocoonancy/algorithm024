@@ -67,3 +67,30 @@ var climbStairs = function(n) {
     if (n === 1 || n === 0) return ;
     return climbStairs(n - 1) + climbStairs(n - 2);
 };
+
+/**
+ * initialize your data structure here.
+ */
+var MinStack = function() {
+    this.stack = [];
+    this.minstack = [];
+};
+MinStack.prototype.push = function(x) {
+    this.stack.push(x);
+    if (this.minstack.length === 0 || this.minstack[this.minstack.length - 1] >= x) {
+        this.minstack.push(x);
+    }
+}
+MinStack.prototype.pop = function() {
+    let x = this.stack.pop();
+    if (x !== 0 && this.minstack[this.minstack.length - 1] === x) {
+        this.minStack.pop()
+    }
+
+}
+MinStack.prototype.top = function() {
+    return this.stack[this.stac.length - 1];
+}
+MinStack.prototype.min = function() {
+    return this.minstack[this.minstack.length - 1];
+}
