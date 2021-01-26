@@ -52,3 +52,18 @@ var fizzBuzz = function(n) {
 };
 
 // [70. 爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/)
+/**
+ * @param {number} n
+ * @return {number}
+ */
+var climbStairs = function(n, m = 1, i = 1) {
+    // 尾递归 没看懂
+    if (n === 1 || n === 0) return m;
+    return climbStairs(n - 1, m + i, m);
+};
+
+var climbStairs = function(n) {
+    // 类推
+    if (n === 1 || n === 0) return ;
+    return climbStairs(n - 1) + climbStairs(n - 2);
+};

@@ -1,13 +1,13 @@
 ###### leetcode题
 
 
-https://leetcode-cn.com/problems/fizz-buzz/
+[412. Fizz Buzz](https://leetcode-cn.com/problems/fizz-buzz/)
 https://leetcode-cn.com/problems/minimum-number-of-people-to-teach/solution/cshuang-bai-hashmapqiu-wu-gong-tong-yu-y-eptr/
 https://leetcode-cn.com/problems/decode-xored-permutation/solution/shuang-bai-yin-han-tiao-jian-1-nde-lei-j-5fx6/
 https://leetcode-cn.com/problems/longest-uncommon-subsequence-i/solution/c-zhi-you-ahe-bxiang-deng-he-bu-deng-lia-37fs/
+[70. 爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/)
 
 其他
-
 https://www.bilibili.com/video/BV12t411u726?from=search&seid=723458696780351189
 
 
