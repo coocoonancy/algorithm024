@@ -192,3 +192,123 @@ var threeSum = function(nums) {
     }
     return res;
 };
+// 283. 移动零 https://leetcode-cn.com/problems/move-zeroes/
+/**
+ * @param {number[]} nums
+ * @return {void} Do not return anything, modify nums in-place instead.
+ */
+var moveZeroes = function(nums) {
+    // 辅助下标
+    let j = 0;
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i]) {
+            nums[j] = nums[i];
+            j++
+        }
+    }
+    for (let i = j; i < nums.length; i++) {
+        nums[i] = 0;
+    }
+};
+// [641. 设计循环双端队列](https://leetcode-cn.com/problems/design-circular-deque/)
+/**
+ * Initialize your data structure here. Set the size of the deque to be k.
+ * @param {number} k
+ */
+/**
+ * Initialize your data structure here. Set the size of the deque to be k.
+ * @param {number} k
+ */
+var MyCircularDeque = function(k) {
+    this.Cdeque = [];
+    this.max = k;
+};
+
+/**
+ * Adds an item at the front of Deque. Return true if the operation is successful. 
+ * @param {number} value
+ * @return {boolean}
+ */
+MyCircularDeque.prototype.insertFront = function(value) {
+    if (this.Cdeque.length === this.max) return false;
+    this.Cdeque.unshift(value);
+    return true;
+};
+
+/**
+ * Adds an item at the rear of Deque. Return true if the operation is successful. 
+ * @param {number} value
+ * @return {boolean}
+ */
+MyCircularDeque.prototype.insertLast = function(value) {
+    if (this.Cdeque.length === this.max) return false;
+    this.Cdeque.push(value);
+    return true;
+};
+
+/**
+ * Deletes an item from the front of Deque. Return true if the operation is successful.
+ * @return {boolean}
+ */
+MyCircularDeque.prototype.deleteFront = function() {
+    if (this.Cdeque.length === 0) return false;
+    this.Cdeque.shift();
+    return true;
+};
+
+/**
+ * Deletes an item from the rear of Deque. Return true if the operation is successful.
+ * @return {boolean}
+ */
+MyCircularDeque.prototype.deleteLast = function() {
+    if (this.Cdeque.length === 0) return false;
+    this.Cdeque.pop();
+    return true;
+};
+
+/**
+ * Get the front item from the deque.
+ * @return {number}
+ */
+MyCircularDeque.prototype.getFront = function() {
+    if (this.Cdeque.length === 0) return -1;
+    return this.Cdeque[0];
+};
+
+/**
+ * Get the last item from the deque.
+ * @return {number}
+ */
+MyCircularDeque.prototype.getRear = function() {
+    if (this.Cdeque.length === 0) return -1;
+    return this.Cdeque[this.Cdeque.length - 1];
+};
+
+/**
+ * Checks whether the circular deque is empty or not.
+ * @return {boolean}
+ */
+MyCircularDeque.prototype.isEmpty = function() {
+    return this.Cdeque.length === 0;
+};
+
+/**
+ * Checks whether the circular deque is full or not.
+ * @return {boolean}
+ */
+MyCircularDeque.prototype.isFull = function() {
+    return this.Cdeque.length === this.max;
+};
+
+/**
+ * Your MyCircularDeque object will be instantiated and called as such:
+ * var obj = new MyCircularDeque(k)
+ * var param_1 = obj.insertFront(value)
+ * var param_2 = obj.insertLast(value)
+ * var param_3 = obj.deleteFront()
+ * var param_4 = obj.deleteLast()
+ * var param_5 = obj.getFront()
+ * var param_6 = obj.getRear()
+ * var param_7 = obj.isEmpty()
+ * var param_8 = obj.isFull()
+ */
