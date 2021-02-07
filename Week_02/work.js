@@ -60,3 +60,136 @@
     图相关：
     手游上线
 */
+
+// [94. 二叉树的中序遍历](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/)
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number[]}
+ */
+var inorderTraversal = function(root) {
+    let arr = [];
+    const inorder = (root) => {
+        if (!root) return;
+        if (root.left) inorder(root.left);
+        arr.push(root.val);
+        if (root.right) inorder(root.right);
+    }
+    inorder(root);
+    return arr;
+};
+// [590. N叉树的后序遍历](https://leetcode-cn.com/problems/n-ary-tree-postorder-traversal/)
+/**
+ * // Definition for a Node.
+ * function Node(val,children) {
+ *    this.val = val;
+ *    this.children = children;
+ * };
+ */
+
+/**
+ * @param {Node} root
+ * @return {number[]}
+ */
+var postorder = function(root) {
+    let arr = [];
+    const porder = (root) => {
+        if (!root) return;
+        if (root.children && root.children.length > 0) {
+            for (let i = 0; i < root.children.length; i++) {
+                porder(root.children[i]);
+            }
+        }
+        arr.push(root.val);
+        
+    }
+    porder(root);
+    return arr;
+};
+// [144. 二叉树的前序遍历](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/submissions/)
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number[]}
+ */
+var preorderTraversal = function(root) {
+    let arr = [];
+    const preorder = (root) => {
+        if (!root) return;
+        arr.push(root.val);
+        if (root.left) preorder(root.left);
+        if (root.right) preorder(root.right);
+    }
+    preorder(root);
+    return arr;
+};
+// [589. N叉树的前序遍历](https://leetcode-cn.com/problems/n-ary-tree-preorder-traversal/description/)
+/**
+ * // Definition for a Node.
+ * function Node(val, children) {
+ *    this.val = val;
+ *    this.children = children;
+ * };
+ */
+
+/**
+ * @param {Node} root
+ * @return {number[]}
+ */
+var preorder = function(root) {
+    let res = [];
+    let porder = (root) => {
+        if (!root) return;
+        res.push(root.val);
+        if (root.children && root.children.length > 0) {
+            for(let i = 0; i < root.children.length; i++) {
+                porder(root.children[i]);
+            }
+        }
+    }
+    porder(root);
+    return res;
+};
+
+// [429. N 叉树的层序遍历](https://leetcode-cn.com/problems/n-ary-tree-level-order-traversal/)
+/**
+ * // Definition for a Node.
+ * function Node(val,children) {
+ *    this.val = val;
+ *    this.children = children;
+ * };
+ */
+
+/**
+ * @param {Node} r
+ * @return {number[][]}
+ */
+var levelOrder = function(root) {
+    let arr = [];
+    if (!root) return arr;
+    let lorder = (r = root, count = 0) => {
+        if (count >= arr.length) arr.push([r.val]);
+        else arr[count].push(r.val);
+        if (r.children && r.children.length > 0) {
+            for (let child of r.children) {
+                lorder(child, count + 1);
+            }
+        }
+    }
+    lorder();
+    return arr;
+};
