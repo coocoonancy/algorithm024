@@ -10,6 +10,14 @@ https://leetcode-cn.com/problems/longest-uncommon-subsequence-i/solution/c-zhi-y
 其他
 https://www.bilibili.com/video/BV12t411u726?from=search&seid=723458696780351189
 
+优秀毕业总结示例：
+
+[1.](https://github.com/Viva5649/algorithm020/tree/main/Week10)
+[2.](https://github.com/Saukes/algorithm020/tree/main/Week10)
+[3.](https://xie.infoq.cn/article/7f317be8ec8f6ee4fc58fd040)
+[4.](https://github.com/Berry961103/algorithm017/blob/master/Week_10/README.md)
+[5.](https://github.com/dadaluoyu/-algorithm015/blob/master/Week_10/README.md)
+
 
 
 
