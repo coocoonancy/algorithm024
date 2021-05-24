@@ -90,6 +90,6 @@ function aStarSearch(graph, start, end) {
 ```
 ###### 参考链接
 [A* 代码模板](https://shimo.im/docs/8CzMlrcvbWwFXA8r/read)
-[相似度测量方法]()
-[二进制矩阵中的最短路径的 A* 解法]()
-[8 puzzles 解法比较]()
+[相似度测量方法](https://dataaspirant.com/five-most-popular-similarity-measures-implementation-in-python/)
+[二进制矩阵中的最短路径的 A* 解法](https://leetcode.com/problems/shortest-path-in-binary-matrix/discuss/313347/A*-search-in-Python)
+[8 puzzles 解法比较](https://zxi.mytechroad.com/blog/searching/8-puzzles-bidirectional-astar-vs-bidirectional-bfs/)

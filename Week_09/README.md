@@ -21,6 +21,9 @@
 ###### 排序算法
 [十大经典排序算法](https://www.cnblogs.com/onepixel/p/
 7674659.html)
+十大经典排序算法
+[9 种经典排序算法可视化动画](https://www.bilibili.com/video/av25136272)
+[6 分钟看完 15 种排序算法动画展示](https://www.bilibili.com/video/av63851336)
 - 分类： 
 1. 比较类排序：通过比较来决定元素间相对次序，由于时间复杂度不能突破O(nlogn),非线性比较类排序
 - 交换排序 冒泡排序、快速排序
